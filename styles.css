@@ -1,113 +1,313 @@
-/* ===================================
-   SIMPLE p5.js PORTFOLIO TEMPLATE
-   Focus: Clean layout for creative coding projects
-   =================================== */
+/* =================================== COLORS =================================== */
+:root {
+  --color-white: #F0EFF7;
+  --color-black: #151515;
+  --color-grey: #6C6C6C;
+}
 
-/* Basic reset - remove default spacing */
+/* =================================== GLOBAL FONT - DIATYPE =================================== */
+
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-Light-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-LightItalic-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-Regular-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-RegularItalic-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-MediumItalic-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-Bold-Trial.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("Fonts/ABCDiatype-BoldItalic-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* =================================== GLOBAL RESET =================================== */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Simple, readable body styles */
+body, p, h1, h2, h3, h4, a, li, button {
+  font-family: "Diatype", sans-serif;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  padding: 50px;
 }
 
-/* Header and Navigation */
-header {
-    border-bottom: 2px solid #333;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
+/* =================================== NAVIGATION =================================== */
+
+.nav-container {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav h1 {
-    margin-bottom: 10px;
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-/* Basic link styling */
 a {
-    color: blue;
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--color-black);
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Section spacing */
-section {
-    margin-bottom: 60px;
+/* =================================== STROKE + BOX LAYOUT =================================== */
+
+.layout-row {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  min-height: 800px; 
 }
 
-section h2 {
-    margin-bottom: 15px;
+.stroke {
+  width: 320px;
+  height: 1px;
+  background-color: var(--color-black);
+  margin-bottom: 0px;
+  position: relative;
 }
 
-section p {
-    margin-bottom: 15px;
+.box-link {
+  display: block;
+  flex: 1;           
+  margin-left: 20px;
+  position: relative;   
+  height: 800px;       
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 0;      
 }
 
-/* Hero section */
-#hero {
-    padding: 40px 0;
-    text-align: center;
+.highlight-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  display: block;
+  z-index: 0;          
 }
 
-#hero h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.text-overlay {
+  position: absolute;
+  top: 24px; 
+  left: 0;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; 
 }
 
-/* p5.js sketch container - the star of the show! */
+
+/* =================================== OVERLAY TEXT =================================== */
+
+.text-overlay {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-overlay * {
+  margin: 0;
+  padding: 0;
+}
+
+.text-overlay .c1 {
+  font-weight: 400;
+  font-size: 10pt;
+  line-height: 12pt;
+  margin-bottom: 8px;
+  color: var(--color-grey);
+}
+
+.text-overlay .h4 {
+  font-weight: 700;
+  font-size: 20pt;
+  line-height: 20pt;
+  margin-bottom: 8px;
+}
+
+.text-overlay .p2 {
+  font-weight: 400;
+  font-size: 14pt;
+  line-height: 18pt;
+  margin-bottom: 40px;
+}
+
+.text-overlay .b2 {
+  font-weight: 400;
+  font-size: 12pt;
+  line-height: 14pt;
+}
+
+/* =================================== TYPE SYSTEM =================================== */
+
+.h1, h1 { font-weight: 700; font-size: 72pt; line-height: 72pt; }
+.h2, h2 { font-weight: 700; font-size: 48pt; line-height: 48pt; }
+.h3, h3 { font-weight: 700; font-size: 32pt; line-height: 32pt; }
+.h4, h4 { font-weight: 700; font-size: 20pt; line-height: 20pt; }
+
+.p1 { font-weight: 400; font-size: 16pt; line-height: 20pt; }
+.p2 { font-weight: 400; font-size: 14pt; line-height: 18pt; }
+
+.c1 { font-weight: 400; font-size: 10pt; line-height: 10pt; }
+
+.b1 { font-weight: 700; font-size: 18pt; line-height: 18pt; }
+.b2 { font-weight: 400; font-size: 12pt; line-height: 12pt; }
+
+/* =================================== NAV TYPE =================================== */
+
+.nav1 {
+  font-weight: 700;
+  font-size: 14pt;
+  line-height: 14pt;
+}
+
+.nav2 {
+  font-weight: 400;
+  font-size: 14pt;
+  line-height: 14pt;
+}
+
+/* =================================== SKETCH PAGE LAYOUT =================================== */
+
+.sketch-date {
+  margin-top: 80px;      
+  font-size: 10pt; 
+  color: var(--color-grey); 
+  font-weight: 400;
+  max-width: 660px;
+}
+
+.sketch-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  column-gap: 40px;
+  align-items: start;            
+  margin-top: 8px;                
+  flex-wrap: wrap;              
+}
+
+.left-title {
+  text-align: left;
+  max-width: 660px;    
+  margin: 0;                 
+}
+
+.right-paragraph {
+  margin-top: 0;          
+  margin-left: auto;      
+  text-align: left;      
+  max-width: 660px;      
+  margin-bottom: 0;
+}
+
+.full-stroke {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+  margin: 80px 0 0 0;            
+}
+
 #sketch-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;              
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
 }
 
 #sketch-container canvas {
-    display: block;
+  display: block;
 }
 
-/* Contact section */
+
+/* =================================== CONTACT LINKS =================================== */
+
 .contact-links {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .contact-links a {
-    padding: 10px 20px;
-    border: 1px solid #333;
+  padding: 10px 20px;
+  border: 1px solid var(--color-black);
+  font-weight: 500;
+  color: var(--color-black);
 }
 
 .contact-links a:hover {
-    background-color: #333;
-    color: white;
-    text-decoration: none;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
-/* Footer */
+/* =================================== FOOTER =================================== */
+
 footer {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #666;
-    font-size: 0.9em;
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  color: var(--color-grey);
+  font-size: 0.9em;
+  font-weight: 300;
 }
+

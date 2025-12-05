@@ -1,90 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags provide information about the page -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My personal portfolio website">
-    
-    <!-- Title appears in the browser tab -->
-    <title>My Portfolio | Your Name</title>
-    
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- p5.js library from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My personal portfolio website">
+  <title>Portfolio | Lucas Clavijo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
 </head>
+
+<!-- Nav Bar -->
 <body>
-    <!-- Header: Contains site navigation and branding -->
-    <header>
-        <nav>
-            <h1>Your Name</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#sketch">Sketch</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="nav-container">
+      <div class="site-name nav1">Lucas Clavijo</div>
+      <ul class="menu">
+        <li><a href="#work" class="nav2">Work</a></li>
+        <li><a href="#about" class="nav2">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main: Contains the primary content of the page -->
-    <main>
-        <!-- Hero Section: Eye-catching intro -->
-        <section id="hero">
-            <h2>Hi, I'm [Your Name]</h2>
-            <p>A creative coder exploring p5.js</p>
-        </section>
+  <!-- Section 1 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+    <!-- Make full box clickable -->
+<a href="sketch.html" class="box-link">
+  <div class="highlight-box">
+    <img src="Images/Images-01.png" alt="Project 1">
+  </div>
+</a>
 
-        <!-- About Section: Information about you -->
-        <section id="about">
-            <h2>About</h2>
-            <p>
-                Write a short bio here. What are you learning? 
-                What kind of creative coding interests you?
-            </p>
-        </section>
+    <div class="text-overlay">
+      <p class="c1">01 project</p>
+      <h4 class="h4">Goooooooaaaaallll</h4>
+      <p class="p2">An unconventional method for timekeeping.</p>
 
-        <!-- Sketch Section: Main p5.js sketch -->
-        <section id="sketch">
-            <h2>My Sketch</h2>
-            <p>Interactive sketch - move your mouse to draw!</p>
-            <!-- Container for p5 canvas -->
-            <div id="sketch-container"></div>
-        </section>
+      
+      <a href="sketch.html" class="view-more b2">view more</a>
+    </div>
+  </div>
 
-        <!-- Contact Section: How to reach you -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com">Email</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            </div>
-        </section>
-    </main>
+  <!-- Section 2 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+<a href="sketch.html" class="box-link">
+  <div class="highlight-box">
+    <img src="Images/Images-02.png" alt="Project 2">
+  </div>
+</a>
 
-    <!-- Footer: Copyright and additional info -->
-    <footer>
-        <p>&copy; 2025 Your Name. Made with ❤️ at Parsons.</p>
-    </footer>
+    <div class="text-overlay">
+      <p class="c1">02 project</p>
+      <h4 class="h4">A cat, dog, and robotic cat walk into a bar...</h4>
+      <p class="p2">An exquisite corpse project.</p>
+      <a href="sketch.html" class="view-more b2">view more</a>
+    </div>
+  </div>
 
-    <!-- p5.js sketch code -->
-    <script>
-        // Setup function runs once when the page loads
-        function setup() {
-            // Create a canvas and place it in the sketch-container div
-            let canvas = createCanvas(400, 400);
-            canvas.parent('sketch-container');
-            background(220);
-        }
+  <!-- Section 3 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+<a href="sketch.html" class="box-link">
+  <div class="highlight-box">
+    <img src="Images/Images-03.png" alt="Project 3">
+  </div>
+</a>
 
-        // Draw function runs continuously (60 times per second)
-        function draw() {
-            // Fill color changes with mouse position
-            fill(mouseX, mouseY, 200);
-            // Draw a circle that follows the mouse
-            circle(mouseX, mouseY, 50);
-        }
-    </script>
+    <div class="text-overlay">
+      <p class="c1">03 project</p>
+      <h4 class="h4">The Great Pumpkin</h4>
+      <p class="p2">An audio visualizer for the Smashing Pumpkins' "1979".</p>
+      <a href="sketch.html" class="view-more b2">view more</a>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+<a href="sketch.html" class="box-link">
+  <div class="highlight-box">
+    <img src="Images/Images-04.png" alt="Project 4">
+  </div>
+</a>
+
+    <div class="text-overlay">
+      <p class="c1">04 project</p>
+      <h4 class="h4">Good Things Come in Threes</h4>
+      <p class="p2">An autobiographical game.</p>
+      <a href="sketch.html" class="view-more b2">view more</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="p2">&copy; 2025 Lucas Clavijo 😼</p>
+  </footer>
+
 </body>
 </html>
