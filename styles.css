@@ -61,7 +61,6 @@
 
 
 /* =================================== GLOBAL RESET =================================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -76,6 +75,14 @@ body, p, h1, h2, h3, h4, a, li, button {
 
 body {
   padding: 50px;
+}
+
+.custom-cursor-page {
+    cursor: none;
+}
+
+.custom-cursor-enabled * {
+    cursor: none !important;
 }
 
 /* =================================== NAVIGATION =================================== */
@@ -334,7 +341,8 @@ z-index: 1;
   display: grid;
   grid-template-columns: 5fr 6fr; 
   gap: 20px; 
-  align-items: center; 
+  align-items: center;
+  cursor: none; 
 }
 
 .image-wrapper {
@@ -377,6 +385,15 @@ z-index: 1;
 
 .paragraph-about:last-child {
   margin-bottom: 0;
+}
+
+/* =================================== CAT CURSOR =================================== */
+#cursor-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 /* =================================== FOOTER =================================== */
