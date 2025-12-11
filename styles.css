@@ -1,12 +1,12 @@
 /* =================================== COLORS =================================== */
 :root {
-  --color-white: #F0EFF7;
-  --color-black: #151515;
+  --color-white: #f6f5fc;
+  --color-black: #051014;
   --color-grey: #6C6C6C;
+  --color-blue: #3772FF;
 }
 
 /* =================================== GLOBAL FONT - DIATYPE =================================== */
-
 @font-face {
   font-family: "Diatype";
   src: url("Fonts/ABCDiatype-Light-Trial.otf") format("opentype");
@@ -91,6 +91,7 @@ body {
   display: flex;
   gap: 20px;
   list-style: none;
+  align-items: center;
 }
 
 a {
@@ -98,60 +99,95 @@ a {
   color: var(--color-black);
 }
 
-a:hover {
+.nav1 {
+  font-weight: 700;
+  font-size: 14pt;
+  line-height: 14pt;
+}
+
+.nav2 {
+  font-weight: 400;
+  font-size: 14pt;
+  line-height: 14pt;
+  height: 100%;
+}
+
+.nav2:hover {
   text-decoration: underline;
 }
 
-/* =================================== STROKE + BOX LAYOUT =================================== */
+.nav-contact-button {
+  display: inline-flex;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14pt;
+  line-height: 14pt;
+  border: 2px solid transparent; 
+}
 
+.nav-contact-button:hover {
+  background: var(--color-white); 
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  text-decoration: none; 
+}
+
+
+/* =================================== STROKE + BOX LAYOUT =================================== */
 .layout-row {
-  position: relative;
-  margin-top: 80px;
-  display: flex;
-  align-items: flex-start;
-  min-height: 800px; 
+position: relative;
+margin-top: 80px;
+display: flex;
+align-items: flex-start;
+min-height: 800px;
 }
 
 .stroke {
-  width: 320px;
-  height: 1px;
-  background-color: var(--color-black);
-  margin-bottom: 0px;
-  position: relative;
+width: 320px;
+height: 1px;
+background-color: var(--color-black);
+margin-bottom: 0px;
+position: relative;
 }
 
 .box-link {
-  display: block;
-  flex: 1;           
-  margin-left: 20px;
-  position: relative;   
-  height: 800px;       
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 0;      
+display: block;
+flex: 1;
+margin-left: 20px;
+position: relative;
+height: 800px;
+text-decoration: none;
+cursor: pointer;
+z-index: 0;
 }
 
 .highlight-box img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   
-  display: block;
-  z-index: 0;          
+position: absolute;
+display: flex;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+z-index: 0;
 }
 
 .text-overlay {
-  position: absolute;
-  top: 24px; 
-  left: 0;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1; 
+position: absolute;
+top: 24px;
+left: 0;
+max-width: 320px;
+display: flex;
+flex-direction: column;
+z-index: 1;
 }
-
 
 /* =================================== OVERLAY TEXT =================================== */
 
@@ -197,9 +233,34 @@ a:hover {
   line-height: 14pt;
 }
 
+.view-more {
+  display: inline-flex; 
+  align-items: center;
+  text-decoration: none; 
+}
+
+.slanted-arrow {
+  width: 10px; 
+  height: 10px; 
+  margin-left: 8px; 
+}
+
+.view-more:hover {
+  color: var(--color-blue); 
+  text-decoration: underline;
+}
+
+.view-more:hover .slanted-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+.view-more:hover .slanted-arrow path {
+  fill: var(--color-blue); 
+}
 /* =================================== TYPE SYSTEM =================================== */
 
-.h1, h1 { font-weight: 700; font-size: 72pt; line-height: 72pt; }
+.h1, h1 { font-weight: 700; font-size: 72pt; line-height: 64pt; }
 .h2, h2 { font-weight: 700; font-size: 48pt; line-height: 48pt; }
 .h3, h3 { font-weight: 700; font-size: 32pt; line-height: 32pt; }
 .h4, h4 { font-weight: 700; font-size: 20pt; line-height: 20pt; }
@@ -212,21 +273,8 @@ a:hover {
 .b1 { font-weight: 700; font-size: 18pt; line-height: 18pt; }
 .b2 { font-weight: 400; font-size: 12pt; line-height: 12pt; }
 
-/* =================================== NAV TYPE =================================== */
 
-.nav1 {
-  font-weight: 700;
-  font-size: 14pt;
-  line-height: 14pt;
-}
-
-.nav2 {
-  font-weight: 400;
-  font-size: 14pt;
-  line-height: 14pt;
-}
-
-/* =================================== SKETCH PAGE LAYOUT =================================== */
+/* =================================== PROJECT PAGE LAYOUT =================================== */
 
 .sketch-date {
   margin-top: 80px;      
@@ -234,14 +282,14 @@ a:hover {
   color: var(--color-grey); 
   font-weight: 400;
   max-width: 660px;
+  margin-bottom: 8px;
 }
 
 .sketch-header {
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  column-gap: 40px;
-  align-items: start;            
-  margin-top: 8px;                
+  column-gap: 20px;
+  align-items: start;                          
   flex-wrap: wrap;              
 }
 
@@ -271,7 +319,7 @@ a:hover {
   justify-content: center;
   margin-top: 80px;              
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: var(--color-white);
   border: 1px solid #ddd;
 }
 
@@ -279,35 +327,68 @@ a:hover {
   display: block;
 }
 
+/* =================================== ABOUT PAGE LAYOUT =================================== */
 
-/* =================================== CONTACT LINKS =================================== */
-
-.contact-links {
-  display: flex;
-  gap: 15px;
+.about-main-content {
+  padding-top: 80px; 
+  display: grid;
+  grid-template-columns: 5fr 6fr; 
+  gap: 20px; 
+  align-items: center; 
 }
 
-.contact-links a {
-  padding: 10px 20px;
-  border: 1px solid var(--color-black);
-  font-weight: 500;
-  color: var(--color-black);
+.image-wrapper {
+  grid-column: 1 / 2;
+  position: relative;
+  width: 100%;
+  height: 0; 
+  padding-bottom: 120.66%; 
+  overflow: hidden;
 }
 
-.contact-links a:hover {
-  background-color: var(--color-black);
-  color: var(--color-white);
+.about-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.text-content {
+  grid-column: 3 / 3; 
+  max-width: 660px;
+  width: 100%; 
+  justify-self: start; 
+}
+
+.title-about {
+  text-align: left; 
+  margin: 0;
+  margin-bottom: 8px; 
+}
+
+.paragraph-about {
+  max-width: 100%; 
+  text-align: left;
+  margin-bottom: 16px;
+  margin-left: 0;
+}
+
+.paragraph-about:last-child {
+  margin-bottom: 0;
 }
 
 /* =================================== FOOTER =================================== */
 
 footer {
-  text-align: center;
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  color: var(--color-grey);
-  font-size: 0.9em;
+  text-align: left;
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid #051014;
+  color: var(--color-black);
+  font-size: 14pt;
   font-weight: 300;
 }
+
 

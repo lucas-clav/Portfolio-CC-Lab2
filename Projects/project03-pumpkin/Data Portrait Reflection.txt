@@ -1,7 +1,0 @@
-For this assignment, I tracked my most-played songs on Spotify over a week. “1979” by The Smashing Pumpkins was my top track, so I made it the focus of my data portrait. Because the project centered on music, I immediately thought of creating an audio visualizer. I used Perlin noise and the Fast Fourier Transform (with guidance from YouTube tutorials) to build a dynamic visual that reacts to the song’s frequencies. While focusing on one song meant excluding the rest of my top tracks, the process revealed how my listening habits shift with the seasons.
-
-
-References
-ChatGPT. (2025). Assistance with writing and code generation [Large language model]. OpenAI. https://chat.openai.com/
-Vira, P. (n.d.). FFT Sound Visualizer using p5.js [YouTube video]. YouTube. https://www.youtube.com/@pattvira
-The Coding Train. (n.d.). Coding Challenge #125: Perlin Noise Flow Field [YouTube video]. YouTube. https://www.youtube.com/@TheCodingTrain

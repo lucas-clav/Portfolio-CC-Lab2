@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,95 +8,195 @@
   <title>Portfolio | Lucas Clavijo</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+  <script src="cat-cursor.js"></script>
 </head>
 
-<!-- Nav Bar -->
+<!-- Nav -->
 <body>
   <header>
     <nav class="nav-container">
-      <div class="site-name nav1">Lucas Clavijo</div>
+      <div class="site-name nav1"><a href="index.html">Lucas Clavijo</a></div>
       <ul class="menu">
-        <li><a href="#work" class="nav2">Work</a></li>
-        <li><a href="#about" class="nav2">About</a></li>
+        <li><a href="index.html#work" class="nav2">Work</a></li>
+        <li><a href="About.html" class="nav2">About</a></li>
+        <li><a href="mailto:clavl051@newschool.edu" class="nav-contact-button">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Section 1 -->
-  <div class="layout-row">
+  <div class="layout-row" id="work">
     <div class="stroke"></div>
-    <!-- Make full box clickable -->
-<a href="sketch.html" class="box-link">
-  <div class="highlight-box">
-    <img src="Images/Images-01.png" alt="Project 1">
-  </div>
-</a>
-
+    <a href="project01.html" class="box-link">
+      <div class="highlight-box placeholder-box">
+        <img src="Images/Images-01.png" alt="Project 1: Primrose Hill">
+      </div>
+    </a>
     <div class="text-overlay">
       <p class="c1">01 project</p>
-      <h4 class="h4">Goooooooaaaaallll</h4>
-      <p class="p2">An unconventional method for timekeeping.</p>
-
-      
-      <a href="sketch.html" class="view-more b2">view more</a>
+      <h4 class="h4">Primrose Hill</h4>
+      <p class="p2">A sketch of the iconic London park.</p>
+      <a href="project01.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
     </div>
   </div>
 
   <!-- Section 2 -->
   <div class="layout-row">
     <div class="stroke"></div>
-<a href="sketch.html" class="box-link">
-  <div class="highlight-box">
-    <img src="Images/Images-02.png" alt="Project 2">
-  </div>
-</a>
-
+    <a href="project02.html" class="box-link">
+      <div class="highlight-box placeholder-box">
+        <img src="Images/Images-02.png" alt="Project 2: Face Generator">
+      </div>
+    </a>
     <div class="text-overlay">
       <p class="c1">02 project</p>
-      <h4 class="h4">A cat, dog, and robotic cat walk into a bar...</h4>
-      <p class="p2">An exquisite corpse project.</p>
-      <a href="sketch.html" class="view-more b2">view more</a>
+      <h4 class="h4">Sir Philip Hue</h4>
+      <p class="p2">A face generator.</p>
+      <a href="project02.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
     </div>
   </div>
 
   <!-- Section 3 -->
   <div class="layout-row">
     <div class="stroke"></div>
-<a href="sketch.html" class="box-link">
-  <div class="highlight-box">
-    <img src="Images/Images-03.png" alt="Project 3">
-  </div>
-</a>
-
+    <a href="project03.html" class="box-link">
+      <div class="highlight-box">
+        <img src="Images/Images-03.png" alt="Project 3: Gooooooaaaaallll">
+      </div>
+    </a>
     <div class="text-overlay">
       <p class="c1">03 project</p>
-      <h4 class="h4">The Great Pumpkin</h4>
-      <p class="p2">An audio visualizer for the Smashing Pumpkins' "1979".</p>
-      <a href="sketch.html" class="view-more b2">view more</a>
+      <h4 class="h4">Goooooooaaaaallll</h4>
+      <p class="p2">An unconventional method for timekeeping.</p>
+      <a href="project03.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
     </div>
   </div>
 
   <!-- Section 4 -->
   <div class="layout-row">
     <div class="stroke"></div>
-<a href="sketch.html" class="box-link">
-  <div class="highlight-box">
-    <img src="Images/Images-04.png" alt="Project 4">
-  </div>
-</a>
-
+    <a href="project04.html" class="box-link">
+      <div class="highlight-box">
+        <img src="Images/Images-04.png" alt="Project 4: A cat, dog, and robotic cat walk into a bar...">
+      </div>
+    </a>
     <div class="text-overlay">
       <p class="c1">04 project</p>
+      <h4 class="h4">A cat, dog, and robotic cat walk into a bar...</h4>
+      <p class="p2">An exquisite corpse project.</p>
+      <a href="project04.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+    <a href="project05.html" class="box-link">
+      <div class="highlight-box placeholder-box">
+        <img src="Images/Images-05.png" alt="Project 5: Seeing Double">
+      </div>
+    </a>
+    <div class="text-overlay">
+      <p class="c1">05 project</p>
+      <h4 class="h4">Seeing Double</h4>
+      <p class="p2">An optical illusion utilizing color.</p>
+      <a href="project05.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+    <a href="project06.html" class="box-link">
+      <div class="highlight-box">
+        <img src="Images/Images-06.png" alt="Project 6: The Great Pumpkin">
+      </div>
+    </a>
+    <div class="text-overlay">
+      <p class="c1">06 project</p>
+      <h4 class="h4">The Great Pumpkin</h4>
+      <p class="p2">An audio visualizer for the Smashing Pumpkins' "1979".</p>
+      <a href="project06.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="layout-row">
+    <div class="stroke"></div>
+    <a href="project07.html" class="box-link">
+      <div class="highlight-box">
+        <img src="Images/Images-07.png" alt="Project 7: Good Things Come in Threes">
+      </div>
+    </a>
+    <div class="text-overlay">
+      <p class="c1">07 project</p>
       <h4 class="h4">Good Things Come in Threes</h4>
       <p class="p2">An autobiographical game.</p>
-      <a href="sketch.html" class="view-more b2">view more</a>
+      <a href="project07.html" class="view-more b2">
+        view more
+        <svg class="slanted-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+          fill="none">
+          <path
+            d="M0.207031 8.20703C-0.0691111 8.48317 -0.0691111 8.93089 0.207031 9.20703C0.483174 9.48317 0.930889 9.48317 1.20703 9.20703L0.707031 8.70703L0.207031 8.20703ZM9.41414 0.707031C9.41414 0.316507 9.09755 -7.56676e-05 8.70703 -7.56512e-05L2.34307 -7.53829e-05C1.95255 -7.53665e-05 1.63596 0.316507 1.63596 0.707031C1.63596 1.09756 1.95255 1.41414 2.34307 1.41414L7.99992 1.41414L7.99992 7.07099C7.99992 7.46152 8.31651 7.7781 8.70703 7.7781C9.09756 7.7781 9.41414 7.46152 9.41414 7.07099L9.41414 0.707031ZM0.707031 8.70703L1.20703 9.20703L9.20703 1.20703L8.70703 0.707031L8.20703 0.207031L0.207031 8.20703L0.707031 8.70703Z"
+            fill="currentColor" />
+        </svg>
+      </a>
     </div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p class="p2">&copy; 2025 Lucas Clavijo 😼</p>
+    <p class="p2">&copy; 2025 Lucas Clavijo | made with ❤️ at Parsons<p>
   </footer>
 
 </body>
+
 </html>
